@@ -1,0 +1,118 @@
+<?xml version = "1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- order.html -->
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+   <title>Order</title>
+
+   <link rel = "stylesheet" href = "styles.css"
+      type = "text/css" />
+</head>
+
+<body>
+   <p class = "bigFont">Confirmacion de Compras</p>
+
+   <!-- Form to input user information and credit card.   -->
+   <!-- Note: No need to input real data in this example. -->
+   <form  action="ClienteSevlet" method = "post">
+       
+      <p style = "font-weight: bold">
+         Ingrese la informacion siguiente.</p>
+
+       <!-- <input type="hidden" name="accion" value="AgregarCliente"> -->
+      <!-- table of form elements -->
+      <table>
+         <tr>
+            <td class = "right bold">Nombres:</td>
+
+            <td>
+               <input type = "text" name = "firstname" size = "25" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Apellidos:</td>
+
+            <td>
+               <input type = "text" name = "lastname" size = "25" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Direccion:</td>
+
+            <td>
+               <input type = "text" name = "street" size = "25" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Ciudad:</td>
+
+            <td>
+               <input type = "text" name = "city" size = "25" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Pais:</td>
+
+            <td>
+               <input type = "text" name = "state" size = "2" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Codigo Postal:</td>
+
+            <td>
+               <input type = "text" name = "zipcode" size = "10" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Telefono:</td>
+
+            <td>
+               (
+                  <input type = "text" name = "phone" size = "3" />
+               )
+
+               <input type = "text" name = "phone2"  size = "3" /> -
+
+               <input type = "text" name = "phone3" size = "4" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">N. Tarjeta de Credito</td>
+
+            <td>
+               <input type = "text" name = "creditcard" size = "25" />
+            </td>
+         </tr>
+
+         <tr>
+            <td class = "right bold">Expiracion (mm/yy):</td>
+
+            <td>
+               <input type = "text" name = "expires" size = "2" /> /
+
+               <input type = "text" name = "expires2" size = "2" />
+            </td>
+         </tr>
+          <!-- <jsp:useBean class="daoImpl.ClienteDAOImpl" id="clienteDAO"></jsp:useBean> -->
+      </table>
+
+      <!-- enable user to submit the form  -->
+      <p><input type = "submit" name="accion" value = "Enviar" /></p>
+      
+      ${mensaje}
+      ${Error}
+   </form>
+</body>
+
+</html>

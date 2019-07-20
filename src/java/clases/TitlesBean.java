@@ -13,19 +13,17 @@ public class TitlesBean implements Serializable {
  String usuarioBD="root";
  String passwordBD="mysql";
 
-   private Connection connection;
+   public static Connection connection;
    private PreparedStatement titlesQuery;
 
    // construct TitlesBean object
-   public TitlesBean()
-   {
+   public TitlesBean(){
       // attempt database connection and setup SQL statements
       try {
         Class.forName("com.mysql.jdbc.Driver");
         connection=DriverManager.getConnection(urlBD,usuarioBD,passwordBD);
 
-         titlesQuery =
-            connection.prepareStatement(
+         titlesQuery = connection.prepareStatement(
                "SELECT isbn, title, editionNumber, " +
                "copyright, publisherID, imageFile, price " +
                "FROM titles ORDER BY title"
